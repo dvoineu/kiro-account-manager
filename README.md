@@ -13,14 +13,16 @@
 </p>
 
 <p align="center">
-  <a href="README_en.md">English</a> | <a href="#readme">简体中文</a> | <a href="README_ru-RU.md">Русский</a>
+  <a href="#english">English</a> | <a href="#简体中文">简体中文</a> | <a href="#русский">Русский</a>
 </p>
+
+---
+
+# 简体中文
 
 <p align="center">
   <b>🚀 智能管理 Kiro IDE 账号，一键切换，配额监控</b>
 </p>
-
----
 
 ## ✨ 功能特性
 
@@ -43,9 +45,7 @@
 
 ### 📦 批量操作
 - 批量刷新 / 批量删除
-- JSON 导入导出
-  - Social：refreshToken + provider
-  - IdC：refreshToken + clientId + clientSecret
+- JSON 导入导出（Social / IdC 格式）
 - SSO Token 批量导入
 - 关键词搜索过滤
 
@@ -58,7 +58,6 @@
 - AI 模型选择与锁定
 - Token 自动刷新（可配置间隔）
 - 切号自动重置机器 ID
-- 机器 ID 绑定账号
 
 ### 🌐 浏览器与代理
 - 自定义浏览器 / 自动检测
@@ -86,55 +85,23 @@
 
 ## 📥 下载
 
-[![Release](https://img.shields.io/github/v/release/hj01857655/kiro-account-manager?style=flat-square)](https://github.com/hj01857655/kiro-account-manager/releases/latest)
+� **[点击这里下载最新版本](https://github.com/hj01857655/kiro-account-manager/releases/latest)**
 
-👉 **[点击这里下载最新版本](https://github.com/hj01857655/kiro-account-manager/releases/latest)**
-
-| 平台 | 文件类型 | 说明 |
-|------|----------|------|
-| Windows | `.msi` | 推荐，双击安装 |
-| Windows | `.exe` | NSIS 安装程序 |
-| macOS | `.dmg` | 拖入 Applications |
+- Windows `.msi` - 推荐，双击安装
+- Windows `.exe` - NSIS 安装程序
+- macOS `.dmg` - 拖入 Applications
 
 ## 💻 系统要求
 
 - **Windows**: Windows 10/11 (64-bit)，需要 WebView2 (Win11 已内置)
 - **macOS**: macOS 10.15+ (Intel/Apple Silicon 通用)
 
-## 🛠️ 技术栈
+## � 交流反求馈
 
-- **前端**: React 18 + Vite 5 + TailwindCSS 3 + Lingui (i18n)
-- **后端**: Tauri 2.x + Rust + Tokio
-- **图标**: Lucide React
-- **存储**: JSON 文件本地存储
-
-## 📁 数据存储
-
-| 数据 | 路径 |
-|------|------|
-| 账号数据 | `%APPDATA%\.kiro-account-manager\accounts.json` |
-| 应用设置 | `%APPDATA%\.kiro-account-manager\app-settings.json` |
-| 机器码备份 | `%APPDATA%\.kiro-account-manager\machine-guid-backup.json` |
-| MCP 配置 | `~/.kiro/settings/mcp.json` |
-| Steering 规则 | `~/.kiro/steering/*.md` |
-
-## 💬 交流反馈
-
-- 💡 问题反馈、功能建议、使用交流
 - 🐛 [提交 Issue](https://github.com/hj01857655/kiro-account-manager/issues)
-- 💬 QQ 群：[Kiro Account Manager 交流群 (1020204332)](https://qm.qq.com/q/Vh7mUrNpa8)
+- 💬 QQ 群：[1020204332](https://qm.qq.com/q/Vh7mUrNpa8)
 
-<p align="center">
-  <a href="https://qm.qq.com/q/Vh7mUrNpa8">
-    <img src="https://img.shields.io/badge/QQ群-1020204332-12B7F5?style=for-the-badge&logo=tencentqq&logoColor=white" alt="QQ群">
-  </a>
-</p>
-
-## ⭐ Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=hj01857655/kiro-account-manager&type=Date)](https://star-history.com/#hj01857655/kiro-account-manager&Date)
-
-## 🚫 源码说明
+## �  源码说明
 
 **后端源码（Rust）已从本仓库移除。**
 
@@ -144,27 +111,7 @@
 - ✅ 必须提供或公开源代码
 - ✅ 必须保留许可证和版权声明
 
-由于这些违规行为，我决定将后端代码闭源。目前仅提供前端代码和预编译的安装包。
-
-**⚠️ 本项目永久免费！**
-
-如果有人向你收费，他们违反了 GPL-3.0 协议，你被骗了！请举报此类违规行为。
-
-## ⚠️ 免责声明
-
-本软件仅供学习交流使用，请勿用于商业用途。使用本软件所产生的任何后果由用户自行承担。
-
-## 📄 开源协议
-
-[GPL-3.0](LICENSE)
-
-**GPL-3.0 要求：**
-- 衍生作品必须以相同协议开源
-- 必须提供或公开源代码
-- 必须保留原始许可证和版权
-- 不得施加额外限制
-
-**违规者将被举报，可能面临法律后果。**
+**⚠️ 本项目永久免费！如果有人向你收费，你被骗了！**
 
 ## 💖 赞助
 
@@ -177,5 +124,224 @@
 
 ---
 
+# English
+
+<p align="center">
+  <b>🚀 Smart Kiro IDE account management with one-click switching and quota monitoring</b>
+</p>
+
+## ✨ Features
+
+### 🔐 Account Login
+- **Desktop OAuth** - Desktop authorization for Google/GitHub/BuilderId
+- **Web Portal OAuth** - Web authorization in WebView window
+- Two methods complement each other for reliable login
+
+### 📊 Account Display
+- Card grid layout, clear at a glance
+- Quota progress bar (main/trial/bonus)
+- Subscription type badge (Free/PRO/PRO+)
+- Token expiration countdown
+- Status highlight (normal/expired/banned/current)
+
+### 🔄 One-Click Switch
+- Seamless Kiro IDE account switching
+- Auto reset machine ID
+- Real-time switch progress
+
+### 📦 Batch Operations
+- Batch refresh / batch delete
+- JSON import/export (Social & IdC formats)
+- SSO Token batch import
+- Keyword search filter
+
+### � Kiro Config
+- **MCP Servers** - CRUD, enable/disable
+- **Steering Rules** - View, edit
+
+### ⚙️ System Settings
+- Four themes (light/dark/purple/green)
+- AI model selection & lock
+- Auto token refresh (configurable interval)
+- Auto reset machine ID on switch
+
+### 🌐 Browser & Proxy
+- Custom browser / auto detect
+- Incognito mode launch
+- HTTP proxy config / auto detect
+
+### 🔑 Machine Code
+- View / backup / restore / reset
+- Windows / macOS support
+
+### 🖥️ IDE Integration
+- Detect Kiro IDE running status
+- One-click start / stop
+- Auto sync proxy and model settings
+
+## 📸 Screenshots
+
+| Home | Account Management |
+|:---:|:---:|
+| ![Home](screenshots/首页.png) | ![Accounts](screenshots/账号管理.png) |
+
+| Login | Settings |
+|:---:|:---:|
+| ![Login](screenshots/登录页.png) | ![Settings](screenshots/设置.png) |
+
+## 📥 Download
+
+👉 **[Download Latest Version](https://github.com/hj01857655/kiro-account-manager/releases/latest)**
+
+- Windows `.msi` - Recommended, double-click to install
+- Windows `.exe` - NSIS installer
+- macOS `.dmg` - Drag to Applications
+
+## 💻 System Requirements
+
+- **Windows**: Windows 10/11 (64-bit), WebView2 required (built-in on Win11)
+- **macOS**: macOS 10.15+ (Intel/Apple Silicon universal)
+
+## 💬 Feedback
+
+- 🐛 [Submit Issue](https://github.com/hj01857655/kiro-account-manager/issues)
+- 💬 QQ Group: [1020204332](https://qm.qq.com/q/Vh7mUrNpa8)
+
+## 🚫 Source Code Notice
+
+**The backend source code (Rust) has been removed from this repository.**
+
+Some individuals violated the GPL-3.0 license by using this project for commercial purposes - **charging users for this free software** - without open-sourcing their modifications. This is a clear violation of the GPL-3.0 terms.
+
+**⚠️ This project is and will always be FREE! If anyone charges you, you have been scammed!**
+
+## 💖 Sponsor
+
+If this project helps you, consider buying me a coffee ☕
+
+<p align="center">
+  <img src="src/assets/donate/wechat.jpg" alt="WeChat" width="200">
+  <img src="src/assets/donate/alipay.jpg" alt="Alipay" width="200">
+</p>
+
+---
+
+# Русский
+
+<p align="center">
+  <b>🚀 Умное управление аккаунтами Kiro IDE с переключением в один клик и мониторингом квот</b>
+</p>
+
+## ✨ Возможности
+
+### 🔐 Вход в аккаунт
+- **Desktop OAuth** - Авторизация на рабочем столе для Google/GitHub/BuilderId
+- **Web Portal OAuth** - Веб-авторизация в окне WebView
+- Два метода дополняют друг друга для надёжного входа
+
+### 📊 Отображение аккаунтов
+- Карточный интерфейс, всё наглядно
+- Прогресс-бар квот (основные/пробные/бонусные)
+- Значок типа подписки (Free/PRO/PRO+)
+- Обратный отсчёт истечения токена
+- Подсветка статуса (активен/истёк/заблокирован/текущий)
+
+### 🔄 Переключение в один клик
+- Бесшовное переключение аккаунта Kiro IDE
+- Автоматический сброс Machine ID
+- Отображение прогресса в реальном времени
+
+### 📦 Пакетные операции
+- Массовое обновление / удаление
+- Импорт/экспорт JSON (Social / IdC форматы)
+- Массовый импорт SSO Token
+- Поиск по ключевым словам
+
+### 🔌 Конфигурация Kiro
+- **MCP серверы** - CRUD, включение/отключение
+- **Steering правила** - Просмотр, редактирование
+
+### ⚙️ Системные настройки
+- Четыре темы (светлая/тёмная/фиолетовая/зелёная)
+- Выбор и блокировка AI модели
+- Автообновление токенов (настраиваемый интервал)
+- Автосброс Machine ID при переключении
+
+### 🌐 Браузер и прокси
+- Пользовательский браузер / автоопределение
+- Запуск в режиме инкогнито
+- Настройка HTTP прокси / автоопределение
+
+### 🔑 Управление Machine Code
+- Просмотр / резервное копирование / восстановление / сброс
+- Поддержка Windows / macOS
+
+### 🖥️ Интеграция с IDE
+- Определение статуса работы Kiro IDE
+- Запуск / остановка в один клик
+- Автосинхронизация прокси и настроек модели
+
+## 📸 Скриншоты
+
+| Главная | Управление аккаунтами |
+|:---:|:---:|
+| ![Главная](screenshots/首页.png) | ![Аккаунты](screenshots/账号管理.png) |
+
+| Вход | Настройки |
+|:---:|:---:|
+| ![Вход](screenshots/登录页.png) | ![Настройки](screenshots/设置.png) |
+
+## 📥 Скачать
+
+👉 **[Скачать последнюю версию](https://github.com/hj01857655/kiro-account-manager/releases/latest)**
+
+- Windows `.msi` - Рекомендуется, двойной клик для установки
+- Windows `.exe` - NSIS установщик
+- macOS `.dmg` - Перетащите в Applications
+
+## 💻 Системные требования
+
+- **Windows**: Windows 10/11 (64-bit), требуется WebView2 (встроен в Win11)
+- **macOS**: macOS 10.15+ (универсальный для Intel/Apple Silicon)
+
+## 💬 Обратная связь
+
+- 🐛 [Создать Issue](https://github.com/hj01857655/kiro-account-manager/issues)
+- 💬 QQ группа: [1020204332](https://qm.qq.com/q/Vh7mUrNpa8)
+
+## 🚫 Примечание об исходном коде
+
+**Исходный код бэкенда (Rust) был удалён из этого репозитория.**
+
+Некоторые лица нарушили лицензию GPL-3.0, используя этот проект в коммерческих целях — **взимая плату за это бесплатное ПО** — без открытия исходного кода своих модификаций.
+
+**⚠️ Этот проект всегда будет БЕСПЛАТНЫМ! Если кто-то берёт с вас деньги, вас обманули!**
+
+## 💖 Поддержать
+
+Если проект вам помог, можете угостить автора кофе ☕
+
+<p align="center">
+  <img src="src/assets/donate/wechat.jpg" alt="WeChat" width="200">
+  <img src="src/assets/donate/alipay.jpg" alt="Alipay" width="200">
+</p>
+
+---
+
+## ⭐ Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=hj01857655/kiro-account-manager&type=Date)](https://star-history.com/#hj01857655/kiro-account-manager&Date)
+
+## 📄 License / 开源协议 / Лицензия
+
+[GPL-3.0](LICENSE)
+
+## ⚠️ Disclaimer / 免责声明 / Отказ от ответственности
+
+本软件仅供学习交流使用，请勿用于商业用途。使用本软件所产生的任何后果由用户自行承担。
+
+This software is for learning and communication purposes only. Users are responsible for any consequences.
+
+---
+
 <p align="center">Made with ❤️ by hj01857655</p>
-<p align="center">如果这个项目对你有帮助，请给个 ⭐！</p>
