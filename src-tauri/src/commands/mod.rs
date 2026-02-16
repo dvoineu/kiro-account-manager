@@ -12,4 +12,4 @@ pub mod proxy_cmd;
 pub mod sso_import_cmd;
 pub mod steering_cmd;
 pub mod update_cmd;
-pub mod web_oauth_cmd;
+// pub mod web_oauth_cmd;  // Временно отключено - модуль отсутствует

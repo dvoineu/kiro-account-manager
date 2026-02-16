@@ -4,12 +4,12 @@ import { emit } from '@tauri-apps/api/event'
 import { Lock, Copy, Sun, Moon, Palette, Check, RefreshCw, Settings as SettingsIcon, Clock, Globe, Search, Shield, Download, Upload, Shuffle, AlertTriangle } from 'lucide-react'
 import { useTheme } from '../contexts/ThemeContext'
 import { useDialog } from '../contexts/DialogContext'
-import { useI18n } from '../i18n.jsx'
+import { useI18n, locales } from '../i18n.jsx'
 
 function Settings() {
   const { theme, setTheme, colors } = useTheme()
   const { showConfirm, showError, showSuccess } = useDialog()
-  const { t } = useI18n()
+  const { t, locale, setLocale } = useI18n()
   const isDark = theme === 'dark'
   
   const [aiModel, setAiModel] = useState('claude-sonnet-4.5')
@@ -402,6 +402,40 @@ function Settings() {
                     <Icon size={20} className="text-white" />
                   </div>
                   <div className={`text-sm font-medium ${colors.text}`}>{opt.name}</div>
+                  {isActive && (
+                    <div className="absolute top-2 right-2 w-5 h-5 bg-blue-500 rounded-full flex items-center justify-center animate-scale-in">
+                      <Check size={12} className="text-white" />
+                    </div>
+                  )}
+                </button>
+              )
+            })}
+          </div>
+        </section>
+
+        {/* 语言设置 */}
+        <section className={`card-glow ${colors.card} rounded-2xl p-6 shadow-sm border ${colors.cardBorder} mb-6 animate-slide-in-left delay-150`}>
+          <h2 className={`text-lg font-semibold ${colors.text} mb-1`}>{t('settings.language')}</h2>
+          <p className={`text-sm ${colors.textMuted} mb-5`}>{t('settings.languageDesc')}</p>
+          
+          <div className="grid grid-cols-3 gap-3">
+            {Object.entries(locales).map(([key, name], index) => {
+              const isActive = locale === key
+              return (
+                <button
+                  key={key}
+                  onClick={() => setLocale(key)}
+                  className={`relative p-4 rounded-xl border-2 transition-all hover:scale-105 ${
+                    isActive 
+                      ? 'border-blue-500 shadow-lg shadow-blue-500/20' 
+                      : `${isDark ? 'border-gray-700 hover:border-gray-600' : 'border-gray-200 hover:border-gray-300'}`
+                  }`}
+                  style={{ animationDelay: `${index * 0.05}s` }}
+                >
+                  <div className={`w-10 h-10 rounded-xl bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center mx-auto mb-2 transition-transform group-hover:scale-110`}>
+                    <Globe size={20} className="text-white" />
+                  </div>
+                  <div className={`text-sm font-medium ${colors.text}`}>{name}</div>
                   {isActive && (
                     <div className="absolute top-2 right-2 w-5 h-5 bg-blue-500 rounded-full flex items-center justify-center animate-scale-in">
                       <Check size={12} className="text-white" />

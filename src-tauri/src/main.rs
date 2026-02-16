@@ -40,7 +40,7 @@ use commands::powers_cmd::*;
 use commands::proxy_cmd::*;
 use commands::sso_import_cmd::*;
 use commands::update_cmd::*;
-use commands::web_oauth_cmd::*;
+// use commands::web_oauth_cmd::*;  // Временно отключено - модуль отсутствует
 use commands::steering_cmd::*;
 use kiro::{
     get_kiro_local_token, get_kiro_telemetry_info, reset_kiro_machine_id, switch_kiro_account,
@@ -135,12 +135,12 @@ fn main() {
             set_custom_machine_guid,
             clear_macos_override,
             generate_machine_guid,
-            // Web OAuth 命令 (Cognito + CBOR)
-            web_oauth_initiate,
-            web_oauth_complete,
-            web_oauth_refresh,
-            web_oauth_login,
-            web_oauth_close_window,
+            // Web OAuth 命令 (Cognito + CBOR) - Временно отключено
+            // web_oauth_initiate,
+            // web_oauth_complete,
+            // web_oauth_refresh,
+            // web_oauth_login,
+            // web_oauth_close_window,
             // 浏览器检测
             detect_installed_browsers,
             // MCP 管理命令

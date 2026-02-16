@@ -17,8 +17,8 @@ export const locales = {
 i18n
   .use(initReactI18next)
   .init({
-    lng: localStorage.getItem('locale') || 'zh-CN',
-    fallbackLng: 'zh-CN',
+    lng: localStorage.getItem('locale') || 'en-US',
+    fallbackLng: 'en-US',
     supportedLngs: ['zh-CN', 'en-US', 'ru-RU'],
     
     // 从 JSON 文件加载翻译

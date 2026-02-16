@@ -5,7 +5,7 @@ mod base;
 mod social;
 mod idc;
 mod factory;
-pub mod web_oauth;
+// pub mod web_oauth;  // Временно отключено - модуль отсутствует
 
 pub use base::{AuthResult, AuthProvider, RefreshMetadata};
 pub use social::SocialProvider;
